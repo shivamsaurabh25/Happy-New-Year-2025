@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #55104c;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.countdown {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.greeting {
+    margin: 20px auto;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    max-width: 80%;
+    text-align: center;
+    line-height: 1.8;
+}
+
+input,
+button {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 5px;
+}
+
+.typewriter p {
+    display: inline-block;
+    font-family: monospace;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .countdown {
+        font-size: 1.5rem;
+    }
+
+    .greeting {
+        font-size: 1.2rem;
+    }
+}

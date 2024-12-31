@@ -1,7 +1,7 @@
 function displayGreeting() {
     const name = document.getElementById('nameInput').value.trim();
     if (name) {
-        const message = `🎉 Happy New Year from ${name}! 🎉<br>🌟 As the clock strikes midnight and we welcome 2025, may this New Year bring an abundance of joy, love, and success into your life. Let go of the past and embrace the future with hope and determination. May your days be filled with happiness, your nights with peace, and your journey ahead with exciting opportunities. Cheers to new beginnings, cherished moments, and dreams coming true. Wishing you and your loved ones a year full of health, prosperity, and endless possibilities. Happy New Year! 🎉✨`;
+        const message = `🎉 Happy New Year from ${name}! 🎉\n🌟 As the clock strikes midnight and we welcome 2025, may this New Year bring an abundance of joy, love, and success into your life. Let go of the past and embrace the future with hope and determination. May your days be filled with happiness, your nights with peace, and your journey ahead with exciting opportunities. Cheers to new beginnings, cherished moments, and dreams coming true. Wishing you and your loved ones a year full of health, prosperity, and endless possibilities. Happy New Year! 🎉✨`;
 
         const words = message.split(' ');
         let index = 0;

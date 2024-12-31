@@ -22,8 +22,28 @@ function displayGreeting() {
         }
 
         typeWord();
+
+        const shareButton = document.getElementById('shareButton');
+                shareButton.style.display = 'inline-block';
+
+                const currentUrl = window.location.href.split('?')[0];
+                const shareUrl = `${currentUrl}?name=${encodeURIComponent(name)}&greeting=${encodeURIComponent(message)}`;
+
+                shareButton.onclick = () => shareGreeting(shareUrl);
     } else {
         document.getElementById('greeting').textContent = 'Please enter your name!';
+    }
+}
+
+function shareGreeting(shareUrl) {
+    if (navigator.share) {
+        navigator.share({
+            title: 'Happy New Year!',
+            text: 'Check out this New Year greeting!',
+            url: shareUrl
+        }).catch(console.error);
+    } else {
+        alert(`Share this link: ${shareUrl}`);
     }
 }
 
@@ -43,3 +63,14 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
+
+function checkForSharedGreeting() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const greeting = urlParams.get('greeting');
+    if (name && greeting) {
+        document.getElementById('greeting').textContent = greeting;
+    }
+}
+
+checkForSharedGreeting();

@@ -29,6 +29,17 @@ button {
     margin: 5px;
 }
 
+.share-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #ff9800;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .typewriter p {
     display: inline-block;
     font-family: monospace;
